@@ -1,0 +1,36 @@
+#shared on facebook through-https://www.facebook.com/profile.php?id=100050860832683&__tn__=%2CdC-R-R&eid=ARDuk8Rr3EEw3FqqWx3lziLGNrWrt_ypSR226g5tGR9kkuEqqdLxEcommfcRRcs7qi-oBsSsIkv2Mt0e&hc_ref=ARQXz5WZb-6cSKEOJgWmgQcaiLW3ATG7gGdv0-IZHYPR6kyp4HUyo-x1S_A8o1S2H_8&fref=nf
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Find the area of a triangle</title>
+</head>
+
+<body>
+<h3>Area: </h3>
+<input type="text" id="side1" placeholder="side lengths">
+
+<input type="text" id="side2" placeholder="side lengths">
+
+<input type="text" id="side3" placeholder="side lengths">
+
+<button type="button" id="btn">See Area</button>
+
+<script src="./script.js"></script>
+</body>
+
+</html>
+
+// script.js
+
+document.querySelector('#btn').addEventListener('click', function () {
+const side1 = parseInt(document.querySelector('#side1').value);
+const side2 = parseInt(document.querySelector('#side2').value);
+const side3 = parseInt(document.querySelector('#side3').value);
+
+var s = (side1 + side2 + side3) / 2;
+var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
+document.querySelector('#result').innerText = area;
+});
